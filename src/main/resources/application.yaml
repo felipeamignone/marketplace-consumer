@@ -1,3 +1,14 @@
 spring:
   application:
     name: marketplace-consumer
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/marketplace_consumer}
+    username: ${SPRING_DATASOURCE_USERNAME:marketplace_consumer}
+    password: ${SPRING_DATASOURCE_PASSWORD:marketplace_consumer}
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+marketplace:
+  api:
+    url: ${MARKETPLACE_API_URL:http://localhost:8080}
